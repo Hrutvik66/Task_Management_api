@@ -8,7 +8,7 @@ const userRouter = Router();
 
 /**
  * @openapi
- * /api/user/register:
+ * /api/auth/register:
  *   post:
  *     summary: Register a new user
  *     tags: [Users]
@@ -58,7 +58,7 @@ userRouter.post("/register", registerUser);
 
 /**
  * @openapi
- * /api/user/login:
+ * /api/auth/login:
  *   post:
  *     summary: Log in an existing user
  *     tags: [Users]
@@ -112,7 +112,7 @@ userRouter.post("/login", loginUser);
 
 /**
  * @openapi
- * /api/user/:
+ * /api/auth/:
  *   get:
  *     summary: Retrieve all users
  *     tags: [Users]

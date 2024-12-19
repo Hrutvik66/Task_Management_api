@@ -10,7 +10,7 @@ const taskRouter = Router();
 
 /**
  * @openapi
- * /api/task:
+ * /api/tasks/:
  *   post:
  *     summary: Create a new task
  *     tags: [Tasks]
@@ -42,7 +42,7 @@ taskRouter.post("/", auth, createTask);
 
 /**
  * @openapi
- * /api/task/:
+ * /api/tasks/:
  *   get:
  *     summary: Get all tasks
  *     tags: [Tasks]
@@ -69,7 +69,7 @@ taskRouter.get("/", getAllTasks);
 
 /**
  * @openapi
- * /api/task/{id}:
+ * /api/tasks/{id}:
  *   get:
  *     summary: Get a task by ID
  *     tags: [Tasks]
@@ -90,7 +90,7 @@ taskRouter.get("/:id", getTaskById);
 
 /**
  * @openapi
- * /api/task/{id}:
+ * /api/tasks/{id}:
  *   put:
  *     summary: Update a task
  *     tags: [Tasks]
@@ -124,7 +124,7 @@ taskRouter.put("/:id", auth, updateTask);
 
 /**
  * @openapi
- * /api/task/{id}:
+ * /api/tasks/{id}:
  *   delete:
  *     summary: Delete a task
  *     tags: [Tasks]

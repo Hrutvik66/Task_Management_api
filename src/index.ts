@@ -51,8 +51,8 @@ app.get("/", async (req: Request, res: Response) => {
   });
 });
 
-app.use("/api/user", userRouter);
-app.use("/api/task", taskRouter);
+app.use("/api/auth", userRouter);
+app.use("/api/tasks", taskRouter);
 
 //? Starting the server
 const server = http.createServer(app);
