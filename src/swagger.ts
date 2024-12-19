@@ -31,6 +31,10 @@ const options = {
         url: "http://localhost:3000/",
         description: "Local server",
       },
+      {
+        url: "https://task-management-api-fzhd.onrender.com/",
+        description: "Production server",
+      }
     ],
   },
   // looks for configuration in specified directories

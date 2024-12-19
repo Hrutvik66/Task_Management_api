@@ -6,10 +6,13 @@ import sequelize from "./database/database";
 import swaggerDocs from "./swagger";
 import userRouter from "./routes/user.route";
 import taskRouter from "./routes/task.route";
+import cors from "cors";
 
 const port = 3000;
 // express application
 const app = express();
+// cors
+app.use(cors());
 
 // sequelize database connection checking functions
 const sequelizeConnection = async () => {
