@@ -1,8 +1,10 @@
 import { Sequelize } from "sequelize";
-
-const sequelize = new Sequelize('postgres://postgres:postgres@localhost:5432/node-api',{
-    logging: false,
-    dialect: 'postgres',
-})
+import dotenv from "dotenv";
+dotenv.config();
+const Database_URL: string = process.env.DB_URL!!;
+const sequelize = new Sequelize(Database_URL, {
+  logging: false,
+  dialect: "postgres",
+});
 
 export default sequelize;
